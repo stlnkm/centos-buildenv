@@ -4,7 +4,9 @@ FROM centos:${BASE_TAG}
 RUN yum -y update \
     && yum -y install epel-release \
     && yum -y groupinstall 'Development Tools' \
-    && yum -y install cmake git \
+    && yum -y install \
+        cmake \
+        git \
     && yum clean all && rm -rf /var/cache/yum \
     && echo $'#!/bin/bash\n\
 set -e\n\
