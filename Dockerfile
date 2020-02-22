@@ -2,7 +2,6 @@ ARG BASE_TAG=7
 FROM centos:${BASE_TAG}
 
 RUN yum -y update \
-    && yum -y install epel-release \
     && yum -y groupinstall 'Development Tools' \
     && yum -y install \
         cmake \
